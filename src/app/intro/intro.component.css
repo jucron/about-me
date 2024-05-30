@@ -4,4 +4,7 @@
 @import "./assets/theme/css/style.css";
 @import "./assets/mobirise/css/mbr-additional.css";
 
-
+.image-wrapper {
+  position: absolute;
+  margin-left: 20%;
+}
