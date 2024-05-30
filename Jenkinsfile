@@ -2,9 +2,13 @@ pipeline {
   agent any
   stages {
     stage('Checkout') {
-      steps {
-        git(branch: 'master', credentialsId: 'jenkins', url: 'git@github.com:jucron/pizza-auth-server.git')
-      }
+        steps {
+            script {
+                  git branch: 'master',
+                  credentialsId: 'jenkins',
+                  url: 'git@github.com:jucron/pizza-auth-server.git'
+              }
+          }
     }
 
     stage('Install Dependencies') {
