@@ -13,6 +13,15 @@ pipeline {
               }
           }
     }
+    stage('Adding nvm Path') {
+      steps {
+        sh script: '''\
+          pwd
+          echo $PATH
+          . ~/.nvm/nvm.sh
+          nvm list'''.stripIndent()
+      }
+    }
     stage('Change Node') {
       steps {
         sh 'nvm use 16'
