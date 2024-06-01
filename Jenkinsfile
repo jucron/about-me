@@ -9,11 +9,15 @@ pipeline {
             script {
                   git branch: 'master',
                   credentialsId: 'jenkins',
-                  url: 'git@github.com:jucron/pizza-auth-server.git'
+                  url: 'git@github.com:jucron/about-me.git'
               }
           }
     }
-
+    stage('Change Node') {
+      steps {
+        sh 'nvm use 16'
+      }
+    }
     stage('Install Dependencies') {
       steps {
         sh 'npm install'
