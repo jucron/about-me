@@ -20,10 +20,8 @@ pipeline {
                 script {
                     // Stop and remove the existing container if it exists
                     sh '''
-                    if [ $(docker ps -q -f name=about-me-container) ]; then
                         docker stop about-me-container
                         docker rm about-me-container
-                    fi
                     '''
 
                     // Run the Docker container
