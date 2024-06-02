@@ -15,7 +15,7 @@ pipeline {
             }
         }
 
-        stage('Run Docker Container') {
+        stage('Cleanup existing Docker Container') {
             steps {
                 script {
                     // Stop and remove the existing container if it exists
@@ -23,7 +23,12 @@ pipeline {
                         docker stop about-me-container
                         docker rm about-me-container
                     '''
-
+                }
+            }
+        }
+      stage('Run Docker Container') {
+            steps {
+                script {
                     // Run the Docker container
                     sh 'docker run -d -p 80:80 --name about-me-container ${DOCKER_IMAGE}'
                 }
