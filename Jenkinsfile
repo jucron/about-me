@@ -27,7 +27,7 @@ pipeline {
                     '''
 
                     // Run the Docker container
-                    sh 'docker run -d -p 4200:80 --name about-me-container ${DOCKER_IMAGE}'
+                    sh 'docker run -d -p 80:80 --name about-me-container ${DOCKER_IMAGE}'
                 }
             }
         }
