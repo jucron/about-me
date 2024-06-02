@@ -19,10 +19,12 @@ pipeline {
             steps {
                 script {
                     // Stop and remove the existing container if it exists
-                    sh '''
-                        docker stop about-me-container
-                        docker rm about-me-container
-                    '''
+                    catchError(buildResult: 'PREVIOUS_SERVER_REPLACED', stageResult: 'NEW_SERVER_UP') {
+                        sh '''
+                            docker stop about-me-container
+                            docker rm about-me-container
+                        '''
+                    }
                 }
             }
         }
