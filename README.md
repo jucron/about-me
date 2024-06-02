@@ -25,6 +25,6 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Docker build, run and push
 
 docker build -t jucron/about-me:latest .
-docker run -d -p 4200:80 --name about-me-test jucron/about-me:latest
+docker run -d -p 80:80 -p 443:443 --name about-me-container jucron/about-me:latest
 
 docker push jucron/about-me:latest

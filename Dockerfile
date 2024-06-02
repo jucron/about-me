@@ -23,8 +23,14 @@ RUN npm run build --prod
 FROM nginx:alpine
 COPY --from=0 /app/dist/about-me /usr/share/nginx/html
 
-# Expose port 80
+# Add certificates
+COPY /nginx/nginx.conf /etc/nginx/conf.d/default.conf
+COPY /nginx/fullchain.crt /etc/nginx/ssl/fullchain.crt
+COPY /nginx/private.key /etc/nginx/ssl/private.key
+
+# Expose port 80 and 443
 EXPOSE 80
+EXPOSE 443
 
 # Start Nginx server
 CMD ["nginx", "-g", "daemon off;"]
