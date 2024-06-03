@@ -32,7 +32,7 @@ pipeline {
             steps {
                 script {
                     // Run the Docker container
-                    sh 'docker run -d -p 80:80 --name about-me-container ${DOCKER_IMAGE}'
+                    sh 'docker run -d -p 80:80 -p 443:443 --name about-me-container ${DOCKER_IMAGE}'
                 }
             }
         }
