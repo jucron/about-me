@@ -5,6 +5,16 @@
 @import "./assets/mobirise/css/mbr-additional.css";
 
 .image-wrapper {
-  position: absolute;
-  margin-left: 20%;
+  position: relative;
+  /*display: block;*/
+  /*margin-left: auto;*/
+  /*align-content: space-evenly;*/
+  margin-right: 0;
+  width: 120%;
+}
+.badge badge-light {
+  position: relative;
+}
+.item-wrapper {
+  position: relative;
 }
