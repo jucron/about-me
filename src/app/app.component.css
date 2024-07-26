@@ -1,5 +1,6 @@
-/*@import "./assets/slidy.css";*/
-/*@import "./assets/styles.css";*/
+@import url(http://fonts.googleapis.com/css?family=Abel);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
 @keyframes slideshow {
   0% { left: 0%; }
   20% { left: 0%; }
@@ -22,8 +23,7 @@ div#slider figure {
   animation: 20s slideshow infinite;
 }
 
-@import url(http://fonts.googleapis.com/css?family=Abel);
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
 
 body { background-color:#fefdfb; color: #555; font-family: 'Abel', sans-serif; font-size: 93%; font-weight:normal;margin: 0; }
 a:link, a:visited, a:active{ color:inherit; text-decoration: none; }

@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./intro.component.css']
 })
 export class IntroComponent implements OnInit {
+  profileImg = 'assets/profile.jpg';
 
   constructor() { }
 

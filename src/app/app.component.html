@@ -15,25 +15,6 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
-<!--        <ul class="nav">-->
-<!--          <li class="nav-item">-->
-<!--            <a class="nav-link active" href="#">Home</a>-->
-<!--          </li>-->
-<!--          <li class="nav-item">-->
-<!--            <a class="nav-link" href="#">Profile</a>-->
-<!--          </li>-->
-<!--          <li class="nav-item">-->
-<!--            <a class="nav-link disabled" href="#">Messages</a>-->
-<!--          </li>-->
-<!--          <li class="nav-item dropdown ml-md-auto">-->
-<!--            <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">Dropdown link</a>-->
-<!--            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">-->
-<!--              <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>-->
-<!--              <div class="dropdown-divider">-->
-<!--              </div> <a class="dropdown-item" href="#">Separated link</a>-->
-<!--            </div>-->
-<!--          </li>-->
-<!--        </ul>-->
         <nav>
           <input type="checkbox" id="show-menu" role="button">
           <label for="show-menu" class="open"><span class="fa fa-bars"></span></label>
@@ -41,9 +22,9 @@
           <ul id="topnav">
             <li><a routerLink="/intro">Intro</a></li>
             <li><a routerLink="/history">My history</a></li>
-            <li><a href="#">Education & Training</a></li>
-            <li><a href="#">Experience</a></li>
-            <li><a href="#">Projects</a></li>
+            <li><a href="/education">Education & Training</a></li>
+            <li><a href="/experience">Experience</a></li>
+            <li><a href="/projects">Projects</a></li>
             <li>
               <ul>
                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -62,7 +43,6 @@
 <div id="container">
   <div id="pageheader">
     <h1>About me</h1>
-<!--    <p>You can call me João Renault!</p>-->
   </div>
 
   <router-outlet></router-outlet>

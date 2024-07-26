@@ -4,3 +4,8 @@
 @import "./assets/theme/css/style.css";
 @import "./assets/mobirise/css/mbr-additional.css";
 
+
+.quote {
+  margin-bottom: 50px;
+  font-style: italic;
+}
